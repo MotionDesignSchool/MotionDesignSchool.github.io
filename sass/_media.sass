@@ -1,0 +1,231 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.front-head-section .front-head-holder
+		padding-top: 30vh
+	.main-header
+		padding: 35px 0
+	.front-head-section .scroll
+		left: 30px
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+	.front-head-section h1
+		@include font28('normal')
+	.front-head-section .scroll
+		display: none
+	.main-header .cart
+		width: 36px 
+		height: 36px
+		padding: 0
+		text-indent: -999999px
+		border: 1px solid rgba(255,255,255,.4)
+		background: url('../img/cart.svg') no-repeat center
+
+	.main-header .login
+		display: none
+	.main-header .cart .count
+		right: 0
+		top: 3px
+	.main-header
+		padding: 20px 0
+	.main-header .container-fluid 
+		padding: 0 20px
+	.main-header .courses
+		display: none
+	.main-header .menu-trigger
+		display: block
+		width: 36px 
+		height: 36px
+		padding: 0
+		text-indent: -999999px
+		border: 1px solid rgba(255,255,255,.4)
+		border-radius: 50%
+		position: relative
+		transition: 0.5s
+		&:before 
+			content: ''
+			width: 12px
+			height: 2px 
+			position: absolute
+			background: $green-cond
+			left: 50%
+			transform: translate(-50%, 0)
+			top: 13px
+		&:after
+			content: ''
+			width: 12px
+			height: 2px 
+			position: absolute
+			background: $green-cond
+			left: 50%
+			transform: translate(-50%, 0)
+			bottom: 13px
+		&.open
+			transform: rotate(-90deg)
+			background: $green-cond
+			border-color: $green-cond
+			transition: 0.5s
+			&:before 
+				animation: menu-top 0.5s ease-in forwards//infinite
+			&:after
+				animation: menu-bottom 0.5s ease-in forwards//infinite
+		@keyframes menu-top
+			33%
+				width: 2px
+			70%
+				top: 10px
+			100% 
+				width: 2px
+				height: 8px
+				top: 10px
+				background: #fff
+		@keyframes menu-bottom
+			33%
+				width: 2px
+			70%
+				bottom: 10px
+			100% 
+				width: 2px
+				height: 8px
+				bottom: 10px
+				background: #fff
+
+				
+
+
+	.front-head-section .front-head-bg:before
+		background-position: center 24vh
+	.featured-section h2
+		@include font50('normal')
+		padding: 93px 0 45px
+	.featured-section .prod-card
+		margin-top: 0
+		margin-bottom: 67px
+	.featured-section .col-md-6:nth-child(2n) .prod-card
+		margin: 0 0 67px 0
+	.featured-section .comingsoon
+		@include font9('normal')
+		top: 28px
+		left: -44px
+		padding: 10px 15px 12px
+	.featured-section .btn
+		margin-top: 0px
+	.awards-section h2
+		@include font50('normal')
+		padding: 93px 0 56px
+	.awards-section .flags
+		width: 100%
+		margin-top: 50px
+	.awards-section h3
+		margin: 58px 0 20px
+		@include font25('normal')
+	.awards-section p
+		@include font12_h('normal')
+		margin-bottom: 20px
+	.awards-section .awards-itevs-holder
+		padding: 27px 0 70px
+	.awards-section .awards-itevs-holder .award-item
+		@include font12_h('normal')
+		padding: 25px 0
+		height: 70px
+	.awards-section .award-logo
+		width: 40px
+		img 
+			width: 100%
+	.awards-section .first-school-row
+		padding-bottom: 70px
+		.col-md-6:nth-child(1)
+			order: 2
+		.col-md-6:nth-child(2)
+			order: 1
+	.awards-section .first-school-row h3
+		margin-top: 40px
+	.awards-section .first-school-row .btn
+		height: 31px 
+		width: 77px
+		margin-right: 18px
+		padding: 0
+		img 
+			width: 60%
+	.awards-section .first-school-row .btn-holder
+		margin-top: 50px
+	.testimonials-section h2
+		@include font50('normal')
+		padding: 64px 0 45px
+	.testimonials-section .text
+		padding: 60px 28px 46px
+	.testimonials-section .testiminial-item
+		width: 100%
+	.testimonials-section .text:before
+		left: 28px
+		width: 91px
+		height: 40px
+		top: -40px
+	.testimonials-section .text:after
+		left: 29px
+		width: 81px
+		height: 81px
+		top: -40px
+	.testimonials-section .img
+		width: 60px
+		height: 60px
+		left: 40px
+	.testimonials-section .more
+		width: 34px
+		height: 34px
+		right: 21px
+	.testimonials-section .more:before
+		width: 75px
+	.testimonials-section
+		padding-bottom: 59px
+	.testimonials-section .owl-dots
+		display: flex
+	.section-seeall
+		padding: 160px 0 176px
+	.section-seeall h3
+		@include font25('normal')
+	.section-seeall:before
+		background-position: center
+	.main-footer .logo 
+		margin-bottom: 38px
+		display: inline-block
+	.main-footer .title
+		margin-bottom: 0
+	.main-footer .mail+p
+		margin-bottom: 56px
+	.main-footer .copyright
+		@include font12('normal')
+		width: 163px
+		position: absolute
+		bottom: 76px
+	.main-footer .footer-menu a
+		margin-right: 22px
+	.main-footer .bottom-row
+		padding-bottom: 70px
+	.main-footer .footer-menu
+		margin-bottom: 46px
+	.main-footer .bottom-row .col-md-4 
+		position: static		
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
